@@ -6,22 +6,28 @@ namespace BoxingUnboxing
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             int i = 123;
+            int i2 = 123;
+            
+            //Boxing (implicite)
             object obj = i;
-            Console.WriteLine(obj.GetType().Name);
+            object obj2 = i;
+
+            Console.WriteLine("Are value types equals {0}", i == i2);
+            Console.WriteLine("Are reference types equals after boxing {0}", obj == obj2);
+
+            Console.ReadLine();
+
+            obj = obj2;
+            Console.WriteLine("Are reference types equals {0}", obj == obj2);
             
             Console.ReadLine();
-            i = 456;
-            Console.WriteLine(i);
-            Console.WriteLine(obj);
 
-            int i2 = (int)obj;
-            Console.WriteLine(i2);
+            //Unboxing (explicite)
+            int i3 = (int)obj;
+            int i4 = (int)obj2;
 
-            //String != string
-            //Int32 != int
+            Console.WriteLine("Are value types equals after unboxing {0}", i3 == i4);
         }
     }
 }

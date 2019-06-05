@@ -25,9 +25,9 @@ namespace Yield
 
         static public IEnumerable GetValues()
         {
-            yield return "Yield";
-            yield return " c'est";
-            yield return " rigolo.";
+            yield return "Hello";
+            yield return " les";
+            yield return " copains.";
         }
 
         static public IEnumerable GetFibonacci()
